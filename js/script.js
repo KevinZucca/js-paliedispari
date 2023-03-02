@@ -1,21 +1,33 @@
+const palindromContainerEl = document.getElementById("palindrome-container");
+const palindromeTextEl = document.getElementById("palindrome-text");
+const palindromeButtonEl = document.getElementById("palindrome-button");
 
-// let userWord = prompt("inserisci una parola");
 
-// function palindrome (word) {
+palindromeButtonEl.addEventListener("click", function(){
+    let palindromeResult = document.createElement("h2");
+    palindromContainerEl.append(palindromeResult);
+    palindromeResult.innerHTML = palindrome(word);
+});
+
+
+let userWord = prompt("inserisci una parola");
+
+function palindrome (word) {
     
-//    if (word == word.split("").reverse("").join("")) {
-//     console.log(word + " è un palindromo") 
-//    } else {
-//     console.log(word + " non è un palindromo")
-//    }
-// }
+   if (word == word.split("").reverse("").join("")) {
+    console.log(word + " è un palindromo") 
+   } else {
+    console.log(word + " non è un palindromo")
+   }
+}
 
-// palindrome(userWord);
+palindrome(userWord);
+
 
 
 // PARI O DISPARI
 //dichiaro una variabile per permettere all'utente di inserire pari o dispari come stringa e la salvo
-let evenOrOdd = prompt("Scegli pari o dispari?");
+// let evenOrOdd = prompt("Scegli pari o dispari?");
 
 //se l'utente sceglie pari o dispari si memorizza la variabile con il nuovo valore
 if (evenOrOdd == "pari") {
@@ -32,7 +44,7 @@ let userNumber;
 
 //l'utente inserisce un numero da 1 a 5
 do {
-  userNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
+//   userNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
 //finchè il numero non è da 1 a 5 o non è un numero il ciclo si ripete
 } while (isNaN(userNumber) || userNumber < 1 || userNumber > 5);
 
